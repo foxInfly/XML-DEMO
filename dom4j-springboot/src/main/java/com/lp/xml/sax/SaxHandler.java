@@ -1,11 +1,11 @@
 package com.lp.xml.sax;
- 
-import java.util.ArrayList;
-import java.util.List;
- 
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * sax触发器类，里面有各种回调方法，当解析XML文档时触发了事件回调该类里相应的方法。

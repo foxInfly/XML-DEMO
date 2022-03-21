@@ -1,14 +1,13 @@
 package com.lp.xml.sax;
- 
+
+import org.xml.sax.InputSource;
+import org.xml.sax.XMLReader;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.List;
- 
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
- 
-import org.xml.sax.InputSource;
-import org.xml.sax.XMLReader;
 
 /**
  * XMLParserSAX.java：解析XML文件并写入到List<Book>集合，
@@ -19,7 +18,8 @@ import org.xml.sax.XMLReader;
 public class XMLParserSAX {
  
 	public static void main(String[] args) {
-		List<Book> books = xmlReader(new File("books.xml"));
+		File file = new File("books.xml");
+		List<Book> books = xmlReader(file);
 //		List<Book> books = saxParser(new File("books.xml"));
 		for (Book book : books) {
 			System.out.println(book.toString());
@@ -57,7 +57,8 @@ public class XMLParserSAX {
 			// 5.把自己写的handler注册到XMLReader中，一般最重要的就是ContentHandler
 			reader.setContentHandler(saxHandler);
 			// 6.将一个xml文档或者资源变成一个java可以处理的InputStream流后，解析正式开始
-			reader.parse(new InputSource(new FileInputStream(file)));
+			InputSource inputSource = new InputSource(new FileInputStream(file));
+			reader.parse(inputSource);
 			List<Book> books = saxHandler.getBookList();
 			return books;
 		} catch (Exception e) {

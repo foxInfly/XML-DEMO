@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: 4j
+server:
+  servlet:
+    context-path: /4j
