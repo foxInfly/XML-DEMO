@@ -6,6 +6,7 @@ import com.lp.jaxb.xml.XmlBuilder;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
@@ -13,8 +14,10 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 @RestController
-public class XstreamController {
+@RequestMapping("jaxb")
+public class JAXBController {
 
+    //http://localhost:8080/xstream/jaxb/listCity
     @GetMapping("listCity")
     public List<City> listCity() throws Exception {
         // 读取XML文件
