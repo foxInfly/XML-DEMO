@@ -25,7 +25,9 @@
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
-            <version>1.4.10</version>
+            <!--1.4.18开始增加了白名单-->
+            <version>1.4.19</version>
+<!--            <version>1.4.10</version>-->
         </dependency>
 
         <dependency>

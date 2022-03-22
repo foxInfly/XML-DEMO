@@ -31,6 +31,7 @@ public class XstreamController {
         br.close();
         // XML转为Java对象
         CityList cityList = (CityList) XstreamUtil.toBean(CityList.class, buffer.toString());
+        System.out.println(cityList.getCityList());
         return cityList.getCityList();
     }
 }
