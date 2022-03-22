@@ -1,4 +1,4 @@
-package com.lp.bean;
+package com.lp.jaxb.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

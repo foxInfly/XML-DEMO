@@ -1,4 +1,4 @@
-package com.lp.xml;
+package com.lp.jaxb.xml;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;

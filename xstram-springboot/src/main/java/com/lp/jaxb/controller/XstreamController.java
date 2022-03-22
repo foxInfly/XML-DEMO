@@ -1,16 +1,14 @@
-package com.lp.controller;
+package com.lp.jaxb.controller;
 
-import com.lp.bean.City;
-import com.lp.bean.CityList;
-import com.lp.xml.XmlBuilder;
+import com.lp.jaxb.bean.City;
+import com.lp.jaxb.bean.CityList;
+import com.lp.jaxb.xml.XmlBuilder;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
